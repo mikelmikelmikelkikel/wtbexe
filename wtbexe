@@ -1,0 +1,495 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local WheresTheBaby = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local XPBackground = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local Minimize = Instance.new("ImageButton")
+local Close = Instance.new("ImageButton")
+local Maximize = Instance.new("ImageButton")
+local DragFrame = Instance.new("Frame")
+local ActualSploits = Instance.new("Frame")
+local TeamFrame = Instance.new("Frame")
+local ParentButton = Instance.new("TextButton")
+local ParentBG = Instance.new("ImageLabel")
+local BabyButton = Instance.new("TextButton")
+local BabyBG = Instance.new("ImageLabel")
+local Title_2 = Instance.new("TextLabel")
+local AttackPlayer = Instance.new("Frame")
+local AttackButton = Instance.new("TextButton")
+local AttackBG = Instance.new("ImageLabel")
+local Title_3 = Instance.new("TextLabel")
+local PlayerNameText = Instance.new("TextBox")
+local TextBG = Instance.new("ImageLabel")
+local SpamVote = Instance.new("Frame")
+local SpamButton = Instance.new("TextButton")
+local SpamBG = Instance.new("ImageLabel")
+local Title_4 = Instance.new("TextLabel")
+local CollectAllPages = Instance.new("Frame")
+local CollectAllPagesButton = Instance.new("TextButton")
+local CAPBG = Instance.new("ImageLabel")
+local Title_5 = Instance.new("TextLabel")
+
+--Properties:
+
+WheresTheBaby.Name = "WheresTheBaby"
+WheresTheBaby.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+WheresTheBaby.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = WheresTheBaby
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.Position = UDim2.new(0.393295169, 0, 0.265073895, 0)
+MainFrame.Size = UDim2.new(0, 261, 0, 447)
+
+XPBackground.Name = "XPBackground"
+XPBackground.Parent = MainFrame
+XPBackground.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+XPBackground.BackgroundTransparency = 1.000
+XPBackground.Position = UDim2.new(-0.00950464699, 0, -6.82719872e-08, 0)
+XPBackground.Size = UDim2.new(1.00859976, 0, 0.798679948, 0)
+XPBackground.Image = "http://www.roblox.com/asset/?id=5838849817"
+XPBackground.ScaleType = Enum.ScaleType.Slice
+XPBackground.SliceCenter = Rect.new(7, 33, 7, 33)
+
+Title.Name = "Title"
+Title.Parent = XPBackground
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Size = UDim2.new(0, 189, 0, 31)
+Title.ZIndex = 2
+Title.Font = Enum.Font.Arcade
+Title.Text = "whereismychild.exe"
+Title.TextColor3 = Color3.fromRGB(209, 209, 209)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Minimize.Name = "Minimize"
+Minimize.Parent = XPBackground
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.Position = UDim2.new(0.70758462, 0, 0, 0)
+Minimize.Size = UDim2.new(0, 23, 0, 31)
+Minimize.ZIndex = 15
+Minimize.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Minimize.ImageTransparency = 1.000
+
+Close.Name = "Close"
+Close.Parent = XPBackground
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.887177289, 0, 0, 0)
+Close.Size = UDim2.new(0, 27, 0, 31)
+Close.ZIndex = 15
+Close.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Close.ImageTransparency = 1.000
+
+Maximize.Name = "Maximize"
+Maximize.Parent = XPBackground
+Maximize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Maximize.BackgroundTransparency = 1.000
+Maximize.Position = UDim2.new(0.803367436, 0, 0, 0)
+Maximize.Size = UDim2.new(0, 20, 0, 31)
+Maximize.ZIndex = 15
+Maximize.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Maximize.ImageTransparency = 1.000
+
+DragFrame.Name = "DragFrame"
+DragFrame.Parent = MainFrame
+DragFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DragFrame.BackgroundTransparency = 1.000
+DragFrame.Position = UDim2.new(-0.00950464699, 0, 0, 0)
+DragFrame.Size = UDim2.new(0, 188, 0, 31)
+
+ActualSploits.Name = "ActualSploits"
+ActualSploits.Parent = MainFrame
+ActualSploits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ActualSploits.BackgroundTransparency = 1.000
+ActualSploits.Position = UDim2.new(0, 0, 0.069351159, 0)
+ActualSploits.Size = UDim2.new(0, 260, 0, 419)
+
+TeamFrame.Name = "TeamFrame"
+TeamFrame.Parent = ActualSploits
+TeamFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TeamFrame.BackgroundTransparency = 0.900
+TeamFrame.Size = UDim2.new(0, 260, 0, 83)
+
+ParentButton.Name = "ParentButton"
+ParentButton.Parent = TeamFrame
+ParentButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ParentButton.BackgroundTransparency = 1.000
+ParentButton.Position = UDim2.new(0.0439598672, 0, 0.433960319, 0)
+ParentButton.Size = UDim2.new(0, 104, 0, 39)
+ParentButton.ZIndex = 2
+ParentButton.Font = Enum.Font.Arcade
+ParentButton.Text = "Daddy"
+ParentButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+ParentButton.TextScaled = true
+ParentButton.TextSize = 14.000
+ParentButton.TextWrapped = true
+
+ParentBG.Name = "ParentBG"
+ParentBG.Parent = TeamFrame
+ParentBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ParentBG.BackgroundTransparency = 1.000
+ParentBG.Position = UDim2.new(0.0280001126, 0, 0.433960319, 0)
+ParentBG.Size = UDim2.new(0, 114, 0, 39)
+ParentBG.Image = "rbxassetid://6533134734"
+
+BabyButton.Name = "BabyButton"
+BabyButton.Parent = TeamFrame
+BabyButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BabyButton.BackgroundTransparency = 1.000
+BabyButton.Position = UDim2.new(0.53242141, 0, 0.433960319, 0)
+BabyButton.Size = UDim2.new(0, 104, 0, 39)
+BabyButton.ZIndex = 2
+BabyButton.Font = Enum.Font.Arcade
+BabyButton.Text = "Beby"
+BabyButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+BabyButton.TextScaled = true
+BabyButton.TextSize = 14.000
+BabyButton.TextWrapped = true
+
+BabyBG.Name = "BabyBG"
+BabyBG.Parent = TeamFrame
+BabyBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BabyBG.BackgroundTransparency = 1.000
+BabyBG.Position = UDim2.new(0.51646167, 0, 0.433960319, 0)
+BabyBG.Size = UDim2.new(0, 114, 0, 39)
+BabyBG.Image = "rbxassetid://6533134734"
+
+Title_2.Name = "Title"
+Title_2.Parent = TeamFrame
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Size = UDim2.new(0, 259, 0, 31)
+Title_2.ZIndex = 2
+Title_2.Font = Enum.Font.Arcade
+Title_2.Text = "Team:"
+Title_2.TextColor3 = Color3.fromRGB(122, 122, 122)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+
+AttackPlayer.Name = "AttackPlayer"
+AttackPlayer.Parent = ActualSploits
+AttackPlayer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AttackPlayer.BackgroundTransparency = 0.900
+AttackPlayer.Position = UDim2.new(0, 0, 0.198090687, 0)
+AttackPlayer.Size = UDim2.new(0, 260, 0, 98)
+
+AttackButton.Name = "AttackButton"
+AttackButton.Parent = AttackPlayer
+AttackButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AttackButton.BackgroundTransparency = 1.000
+AttackButton.Position = UDim2.new(0.247319847, 0, 0.61763376, 0)
+AttackButton.Size = UDim2.new(0, 125, 0, 31)
+AttackButton.ZIndex = 2
+AttackButton.Font = Enum.Font.Arcade
+AttackButton.Text = "Attack"
+AttackButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+AttackButton.TextScaled = true
+AttackButton.TextSize = 14.000
+AttackButton.TextWrapped = true
+
+AttackBG.Name = "AttackBG"
+AttackBG.Parent = AttackPlayer
+AttackBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AttackBG.BackgroundTransparency = 1.000
+AttackBG.Position = UDim2.new(0.228000104, 0, 0.61763376, 0)
+AttackBG.Size = UDim2.new(0, 138, 0, 31)
+AttackBG.Image = "rbxassetid://6533134734"
+
+Title_3.Name = "Title"
+Title_3.Parent = AttackPlayer
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.Size = UDim2.new(0, 259, 0, 31)
+Title_3.ZIndex = 2
+Title_3.Font = Enum.Font.Arcade
+Title_3.Text = "Attack:"
+Title_3.TextColor3 = Color3.fromRGB(122, 122, 122)
+Title_3.TextScaled = true
+Title_3.TextSize = 14.000
+Title_3.TextWrapped = true
+
+PlayerNameText.Name = "PlayerNameText"
+PlayerNameText.Parent = AttackPlayer
+PlayerNameText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerNameText.BackgroundTransparency = 1.000
+PlayerNameText.Position = UDim2.new(0.106923029, 0, 0.316326529, 0)
+PlayerNameText.Size = UDim2.new(0, 205, 0, 22)
+PlayerNameText.ZIndex = 2
+PlayerNameText.Font = Enum.Font.Arcade
+PlayerNameText.PlaceholderColor3 = Color3.fromRGB(209, 209, 209)
+PlayerNameText.PlaceholderText = "Player Name"
+PlayerNameText.Text = ""
+PlayerNameText.TextColor3 = Color3.fromRGB(139, 139, 139)
+PlayerNameText.TextScaled = true
+PlayerNameText.TextSize = 14.000
+PlayerNameText.TextWrapped = true
+
+TextBG.Name = "TextBG"
+TextBG.Parent = AttackPlayer
+TextBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBG.BackgroundTransparency = 1.000
+TextBG.Position = UDim2.new(0.106923029, 0, 0.316326529, 0)
+TextBG.Size = UDim2.new(0, 205, 0, 22)
+TextBG.Image = "rbxassetid://6531499454"
+
+SpamVote.Name = "SpamVote"
+SpamVote.Parent = ActualSploits
+SpamVote.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpamVote.BackgroundTransparency = 0.900
+SpamVote.Position = UDim2.new(0, 0, 0.431980908, 0)
+SpamVote.Size = UDim2.new(0, 260, 0, 67)
+
+SpamButton.Name = "SpamButton"
+SpamButton.Parent = SpamVote
+SpamButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpamButton.BackgroundTransparency = 1.000
+SpamButton.Position = UDim2.new(0.247319847, 0, 0.462526947, 0)
+SpamButton.Size = UDim2.new(0, 125, 0, 31)
+SpamButton.ZIndex = 2
+SpamButton.Font = Enum.Font.Arcade
+SpamButton.Text = "SPAM"
+SpamButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+SpamButton.TextScaled = true
+SpamButton.TextSize = 14.000
+SpamButton.TextWrapped = true
+
+SpamBG.Name = "SpamBG"
+SpamBG.Parent = SpamVote
+SpamBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpamBG.BackgroundTransparency = 1.000
+SpamBG.Position = UDim2.new(0.228000104, 0, 0.462526947, 0)
+SpamBG.Size = UDim2.new(0, 138, 0, 31)
+SpamBG.Image = "rbxassetid://6533134734"
+
+Title_4.Name = "Title"
+Title_4.Parent = SpamVote
+Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.BackgroundTransparency = 1.000
+Title_4.Size = UDim2.new(0, 259, 0, 31)
+Title_4.ZIndex = 2
+Title_4.Font = Enum.Font.Arcade
+Title_4.Text = "Spam Vote:"
+Title_4.TextColor3 = Color3.fromRGB(122, 122, 122)
+Title_4.TextScaled = true
+Title_4.TextSize = 14.000
+Title_4.TextWrapped = true
+
+CollectAllPages.Name = "CollectAllPages"
+CollectAllPages.Parent = ActualSploits
+CollectAllPages.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CollectAllPages.BackgroundTransparency = 0.900
+CollectAllPages.Position = UDim2.new(0, 0, 0.591885388, 0)
+CollectAllPages.Size = UDim2.new(0, 260, 0, 69)
+
+CollectAllPagesButton.Name = "CollectAllPagesButton"
+CollectAllPagesButton.Parent = CollectAllPages
+CollectAllPagesButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CollectAllPagesButton.BackgroundTransparency = 1.000
+CollectAllPagesButton.Position = UDim2.new(0.247319847, 0, 0.462526947, 0)
+CollectAllPagesButton.Size = UDim2.new(0, 125, 0, 31)
+CollectAllPagesButton.ZIndex = 2
+CollectAllPagesButton.Font = Enum.Font.Arcade
+CollectAllPagesButton.Text = "COLLECT"
+CollectAllPagesButton.TextColor3 = Color3.fromRGB(139, 139, 139)
+CollectAllPagesButton.TextScaled = true
+CollectAllPagesButton.TextSize = 14.000
+CollectAllPagesButton.TextWrapped = true
+
+CAPBG.Name = "CAPBG"
+CAPBG.Parent = CollectAllPages
+CAPBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CAPBG.BackgroundTransparency = 1.000
+CAPBG.Position = UDim2.new(0.228000104, 0, 0.462526947, 0)
+CAPBG.Size = UDim2.new(0, 138, 0, 31)
+CAPBG.Image = "rbxassetid://6533134734"
+
+Title_5.Name = "Title"
+Title_5.Parent = CollectAllPages
+Title_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_5.BackgroundTransparency = 1.000
+Title_5.Size = UDim2.new(0, 259, 0, 31)
+Title_5.ZIndex = 2
+Title_5.Font = Enum.Font.Arcade
+Title_5.Text = "Collect All Pages:"
+Title_5.TextColor3 = Color3.fromRGB(122, 122, 122)
+Title_5.TextScaled = true
+Title_5.TextSize = 14.000
+Title_5.TextWrapped = true
+
+-- Scripts:
+
+local function GTYTTH_fake_script() -- Minimize.MinimizeScript 
+	local script = Instance.new('LocalScript', Minimize)
+
+	function leftClick()
+		script.Parent.Parent.Parent.Position = UDim2.new(0.02,-0,0.966,-0)
+	end 
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(GTYTTH_fake_script)()
+local function JPYFIUC_fake_script() -- Close.CloseScript 
+	local script = Instance.new('LocalScript', Close)
+
+	function leftClick()
+		script.Parent.Parent.Parent.Parent:Destroy()
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(JPYFIUC_fake_script)()
+local function ABLO_fake_script() -- Maximize.MaximizeScript 
+	local script = Instance.new('LocalScript', Maximize)
+
+	function leftClick()
+		script.Parent.Parent.Parent.Position = UDim2.new(0.01, 0,0.181, 0)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(ABLO_fake_script)()
+local function CXILEIH_fake_script() -- MainFrame.DragScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.DragFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(CXILEIH_fake_script)()
+local function KEIT_fake_script() -- ParentButton.ScriptLoader 
+	local script = Instance.new('LocalScript', ParentButton)
+
+	
+	
+	function leftClick()
+		local A_1 = game:GetService("Players").LocalPlayer
+		local A_2 = BrickColor.new("Bright red")
+		local Event = game:GetService("Workspace").GameStuff.FE.TeamChange
+		Event:FireServer(A_1, A_2)
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(KEIT_fake_script)()
+local function MIWZJEZ_fake_script() -- BabyButton.ScriptLoader 
+	local script = Instance.new('LocalScript', BabyButton)
+
+	
+	
+	function leftClick()
+		local A_1 = game:GetService("Players").LocalPlayer
+		local A_2 = BrickColor.new("Bright blue")
+		local Event = game:GetService("Workspace").GameStuff.FE.TeamChange
+		Event:FireServer(A_1, A_2)
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(MIWZJEZ_fake_script)()
+local function BTDAT_fake_script() -- AttackButton.ScriptLoader 
+	local script = Instance.new('LocalScript', AttackButton)
+
+	local PlayerName = script.Parent.Parent.PlayerNameText
+	
+	function leftClick()
+		if PlayerName.Text == nil then PlayerName.PlaceHolderText = "Not A Valid Name" wait(2) PlayerName.PlaceHolderText = "Player Name" else
+		local A_1 = game:GetService("Players").LocalPlayer
+		local A_2 = game:GetService("Workspace").InGame[PlayerName]
+		local A_3 = 30
+		local Event = game:GetService("Workspace").GameStuff.FE.Interact
+		Event:FireServer(A_1, A_2, A_3)
+	end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(BTDAT_fake_script)()
+local function IZMYRHJ_fake_script() -- SpamButton.ScriptLoader 
+	local script = Instance.new('LocalScript', SpamButton)
+
+	
+	
+	function leftClick()
+		local A_1 = "3"
+		local A_2 = 3
+		local Event = game:GetService("Workspace").GameStuff.Votes.Vote
+		Event:FireServer(A_1, A_2)
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(IZMYRHJ_fake_script)()
+local function GWMP_fake_script() -- CollectAllPagesButton.ScriptLoader 
+	local script = Instance.new('LocalScript', CollectAllPagesButton)
+
+	
+	
+	function leftClick()
+		local A_1 = game:GetService("Players").LocalPlayer
+		local A_2 = game:GetService("Workspace").Debri.Pages.Paper
+		local A_3 = 30
+		local Event = game:GetService("Workspace").GameStuff.FE.Interact
+		Event:FireServer(A_1, A_2, A_3)
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(leftClick)
+	
+end
+coroutine.wrap(GWMP_fake_script)()
